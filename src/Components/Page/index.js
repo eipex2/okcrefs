@@ -49,15 +49,14 @@ class Page extends Component {
                         <IconButton color="inherit" aria-label="Menu">
                             <MenuIcon />
                         </IconButton>    
-                        <Typography variant="title">OKC Referees</Typography>                    
-                        <span style={{ flex: 1 }}></span>
+                        <Typography variant="title"  style={{ flex: 1, textAlign:'center' }}></Typography>                    
                         {
                             authenticated ?
-                            <Button color="inherit" onClick={this.signOut}>Logout</Button>
-                            :<Button color="inherit" onClick={() => history.push('/login')}>Login</Button>
+                            <Button color="inherit" onClick={this.signOut}>Sign out</Button>
+                            :<Button color="inherit" onClick={() => history.push('/login')}>Sign in</Button>
                         }
                     </Toolbar>
-                    <Toolbar style={{ backgroundColor: 'black', justifyContent: 'center', alignItems: 'center' }}>
+                    <Toolbar style={styles.toolbar}>
                         {/* <IconButton color="inherit" aria-label="Menu">
                             <MenuIcon />
                         </IconButton> */}
@@ -72,6 +71,16 @@ class Page extends Component {
     }
 
 }
+
+const styles = {
+    toolbar:{
+        justifyContent: 'center', 
+        alignItems: 'center',
+        background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
+        backgroundBlendMode: "multiply"
+    }   
+}
+
 
 
 
