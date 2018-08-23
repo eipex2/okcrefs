@@ -3,21 +3,64 @@ import React from 'react'
 import './landing.css'
 
 import { Page, Body } from '../../Components'
-
+import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
 
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css'
 
 import MenuIcon from '@material-ui/icons/Menu';
 
+const styles = theme => ({
+    heroUnit: {
+        backgroundImage: "linear-gradient(to right, #d7d2cc 0%, #304352 100%)"
+    },
+    heroContent: {
+        maxWidth: 600,
+        margin: '0 auto',
+        padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`,
+      
+
+    },
+    heroButtons: {
+        marginTop: theme.spacing.unit * 4,
+    },
+    footer: {
+        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing.unit * 6,
+    },
+})
+
 const Landing = (props) => {
 
-    const { history } = props
+    const { history, classes } = props
     return (
         <Page history={history} authenticated>
+            <div className={classes.heroUnit}>
+                <div className={classes.heroContent}>
+                    <Typography variant="display3" align="center" style={{color:'white',}} gutterBottom>
+                        Oklahoma Referees
+                        </Typography>
+                    <Typography variant="title" align="center" color="textSecondary" paragraph>
+                        Something short and leading about the collection below—its contents, the creator, etc.
+                        Make it short and sweet, but not too short so folks don&apos;t simply skip over it
+                        entirely.
+                        </Typography>
+                    <div className={classes.heroButtons}>
+                        <Grid container spacing={16} justify="center">
+                            <Grid item>
+                                <Button variant="contained" color="primary" style={{letterSpacing:'1px'}}>
+                                    learn more
+                                    </Button>
+                            </Grid>
+                        </Grid>
+                    </div>
+                </div>
+            </div>
             <Body>
                 <Typography variant="headline" component="h1" style={{ textAlign: 'center' }}>
                     Upcoming events
@@ -116,17 +159,33 @@ const Landing = (props) => {
                         <h3 className="vertical-timeline-element-title">OPL Festival Play</h3>
                         <h4 className="vertical-timeline-element-subtitle">TBD</h4>
                         <p>
-                        November 9th – 11th 
+                            November 9th – 11th
                         </p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
 
             </Body>
+            {/* Footer */}
+            <footer className={classes.footer}>
+                <Typography variant="title" align="center" gutterBottom>
+                    Oklahoma Referees
+                </Typography>
+                <Typography variant="subheading" align="center" color="textSecondary" component="p">
+                    created 2018
+                </Typography>
+            </footer>
+            {/* End footer */}
         </Page>
     )
 }
 
-export default Landing;
+Landing.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Landing);
+
+
 
 
 
