@@ -62,7 +62,12 @@ class Page extends Component {
                         </IconButton> */}
                         <Button color="inherit" onClick={() => history.push('/')}>Home</Button>
                         <Button color="inherit" onClick={() => history.push('/policies')}>Policies</Button>
-                        <Button color="inherit">Calender</Button>
+                        <Button color="inherit" onClick={() => history.push('/comingSoon')}>Calander</Button>
+                        <Button color="inherit" onClick={() => history.push('/comingSoon')}>Rules</Button>
+                        <Button color="inherit" onClick={() => history.push('/srcInfo')}>SRC Info</Button>
+                        <Button color="inherit" onClick={() => history.push('/comingSoon')}>Upgrade</Button>
+                        <Button color="inherit" onClick={() => history.push('/comingSoon')}>Evaluations</Button>
+                        <Button color="inherit" onClick={() => history.push('/links')}>Links</Button>
                     </Toolbar>
                 </AppBar>
                 {children}
