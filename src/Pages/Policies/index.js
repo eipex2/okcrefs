@@ -1,11 +1,66 @@
 import React, {Component} from 'react'
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
 
 import { Page } from '../../Components'
+
+import './policies.css'
 
 const Policies = (props) => {
     return ( 
         <Page history={props.history}>
-            <div class="container">
+            <div className="policiesContainer">
+                <Paper className={Policies.width}>
+                    <Typography className={Policies.heading}> Oklahoma State Referee Committee
+                    </Typography>
+                    <ExpansionPanel>
+                        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography className={Policies.heading}>SECTION I: Objectives</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                        <Typography>
+                            Objectives
+                        </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel>
+                        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography className={Policies.heading}>SECTION II: Structure</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                        <Typography>
+                            Structure
+                        </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel>
+                        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography className={Policies.heading}>SECTION III: Duties and Responsibilities</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                        <Typography>
+                            Duties and Responsibilities
+                        </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel>
+                        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography className={Policies.heading}>SECTION IV: Referee Policies</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                        <Typography>
+                            Referee Policies
+                        </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                </Paper>
+            </div>
+        </Page>
+            /* <div class="container">
                 <div class="">
                     <h2 style="text-align:center;"><strong>Oklahoma State Referee Committee</strong></h2>     <br></br>
                     <h4><strong>Policies and Procedures</strong></h4>
@@ -673,8 +728,7 @@ const Policies = (props) => {
                     <br></br>
                     <p><i>Last updated October 15th 2018</i></p>
                 </div>
-            </div>
-        </Page>
+            </div> */
     )
 }
 

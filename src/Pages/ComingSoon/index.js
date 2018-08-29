@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Paper from '@material-ui/core/Paper';
 
 import './../default.css'
 
@@ -7,11 +8,13 @@ import { Page } from '../../Components'
 const ComingSoon = (props) => {
     return ( 
         <Page history={props.history}>
-            <div class="backGroundColor">
-                <div class="center linePadding">
-                    Coming Soon
+            <Paper>
+                <div class="backGroundColor">
+                    <div class="center linePadding">
+                        Coming Soon
+                    </div>
                 </div>
-            </div>
+            </Paper>
         </Page>
     )
 }

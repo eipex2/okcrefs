@@ -35,9 +35,7 @@ const SRCInfo = (props) => {
                 <Card>
                     <CardMedia image="./Photos/RonPoulsen.jpg" />
                     <CardContent>
-                        <Typography gutterBottom variant="headline" component="h2">
-                            State Referee Administrator
-                        </Typography>
+                        <Typography gutterBottom variant="headline" component="h2"> State Referee Administrator </Typography>
                         <Typography component="p"> Ronald Poulsen </Typography>
                         <Typography component="p"> Tulsa, OK</Typography>
                         <Typography component="p"> 918-521-6286 </Typography>
