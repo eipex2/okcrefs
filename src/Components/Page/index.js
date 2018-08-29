@@ -14,6 +14,8 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import logo from '../../Assets/Logo.png';
+
 class Page extends Component {
     constructor(props) {
         super(props)
@@ -45,10 +47,9 @@ class Page extends Component {
         return (
             <div className="Page">
                 <AppBar position="static">
+                   
                     <Toolbar style={{ flex: 1, color: 'black', backgroundColor: 'white' }}>
-                        <IconButton color="inherit" aria-label="Menu">
-                            <MenuIcon />
-                        </IconButton>    
+                        <img src={logo} width="108" height="108" />   
                         <Typography variant="title"  style={{ flex: 1, textAlign:'center' }}></Typography>                    
                         {
                             authenticated ?
