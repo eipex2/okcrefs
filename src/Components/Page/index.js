@@ -58,9 +58,6 @@ class Page extends Component {
                         }
                     </Toolbar>
                     <Toolbar style={styles.toolbar}>
-                        {/* <IconButton color="inherit" aria-label="Menu">
-                            <MenuIcon />
-                        </IconButton> */}
                         <Button color="inherit" onClick={() => history.push('/')}>Home</Button>
                         <Button color="inherit" onClick={() => history.push('/policies')}>Policies</Button>
                         <Button color="inherit" onClick={() => history.push('/comingSoon')}>Calander</Button>
