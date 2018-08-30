@@ -33,7 +33,7 @@ class Login extends Component {
         const { email, password } = this.state
 
         loginUser(email, password).then(
-            (success, err) => history.push('/profile')
+            (success, err) => history.push('/refStatus')
         ).catch(err => console.log(err))
     }
 
@@ -46,42 +46,42 @@ class Login extends Component {
         const { history, classes } = this.props
 
         return <Page history={history}>
-                <React.Fragment>
-                    <CssBaseline />
-                    <main className={classes.layout}>
-                        <Paper className={classes.paper}>
-                            <Avatar className={classes.avatar}>
-                                <LockIcon />
-                            </Avatar>
-                            <Typography variant="headline">Sign in</Typography>
-                            <form className={classes.form}>
-                                <FormControl margin="normal" required fullWidth>
-                                    <InputLabel htmlFor="email">Email Address</InputLabel>
-                                    <Input value={email} id="email" name="email" autoComplete="email" autoFocus onChange={this.onChange} />
-                                </FormControl>
-                                <FormControl value={password} margin="normal" required fullWidth>
-                                    <InputLabel htmlFor="password">Password</InputLabel>
-                                    <Input
-                                        name="password"
-                                        type="password"
-                                        id="password"
-                                        autoComplete="current-password"
-                                        onChange={this.onChange}
-                                    />
-                                </FormControl>
-                                <Button
-                                    fullWidth
-                                    variant="raised"
-                                    color="primary"
-                                    className={classes.submit}
-                                    onClick={this.loginAction}
-                                >
-                                    Sign in
+            <React.Fragment>
+                <CssBaseline />
+                <main className={classes.layout}>
+                    <Paper className={classes.paper}>
+                        <Avatar className={classes.avatar}>
+                            <LockIcon />
+                        </Avatar>
+                        <Typography variant="headline">Sign in</Typography>
+                        <form className={classes.form}>
+                            <FormControl margin="normal" required fullWidth>
+                                <InputLabel htmlFor="email">Email Address</InputLabel>
+                                <Input value={email} id="email" name="email" autoComplete="email" autoFocus onChange={this.onChange} />
+                            </FormControl>
+                            <FormControl value={password} margin="normal" required fullWidth>
+                                <InputLabel htmlFor="password">Password</InputLabel>
+                                <Input
+                                    name="password"
+                                    type="password"
+                                    id="password"
+                                    autoComplete="current-password"
+                                    onChange={this.onChange}
+                                />
+                            </FormControl>
+                            <Button
+                                fullWidth
+                                variant="raised"
+                                color="primary"
+                                className={classes.submit}
+                                onClick={this.loginAction}
+                            >
+                                Sign in
             </Button>
-                            </form>
-                        </Paper>
-                    </main>
-                </React.Fragment>
+                        </form>
+                    </Paper>
+                </main>
+            </React.Fragment>
         </Page >
     }
 

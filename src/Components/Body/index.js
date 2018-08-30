@@ -7,15 +7,20 @@ import "./body.css"
 const Body = (props) => {
 
     const {
-        children, center 
+        children, center,bgc
     } = props
 
-    const {centerm} = styles
+    
 
     var style={}
 
     if(center){
-        style=styles.centerm
+        const {centerm} = cstyles
+        style=centerm
+    }
+
+    if(bgc){
+        style={...style, backgroundColor:bgc}
     }
 
     return (
@@ -25,7 +30,7 @@ const Body = (props) => {
     )
 }
 
-const styles = {
+const cstyles = {
     centerm: {
         display: 'flex',
         alignItems: 'center',

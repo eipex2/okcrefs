@@ -1,23 +1,19 @@
 import { combineReducers } from 'redux'
 
-
-const I_S = {
-    name: '',
-    who: '',
-    number: '',
-    id:''
-
-}
-
 const rootReducer = combineReducers({
-    challengeState: (state = {}, action) => {
+    refSatusState: (state = {referees:[]}, action) => {
         switch (action.type) {
-            case "ACCEPT_CHALLENGE":
-                return Object.assign({}, state, action.data)
+            case "ADD_REFEREE":
+                return {
+                    ...state,
+                    referees: [...state.referees, action.data]
+                }
+            case "SET_REFEREES":
+                return Object.assign({}, state, {referees:action.data})
             default:
                 return state;
         }
     }
 })
-
+ 
 export default rootReducer

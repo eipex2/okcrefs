@@ -2,7 +2,7 @@ import React from 'react'
 
 import './landing.css'
 
-import { Page, Body } from '../../Components'
+import { Page, Body , Footer} from '../../Components'
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -23,15 +23,9 @@ const styles = theme => ({
         maxWidth: 600,
         margin: '0 auto',
         padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`,
-      
-
     },
     heroButtons: {
         marginTop: theme.spacing.unit * 4,
-    },
-    footer: {
-        backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing.unit * 6,
     },
 })
 
@@ -39,7 +33,7 @@ const Landing = (props) => {
 
     const { history, classes } = props
     return (
-        <Page history={history} authenticated>
+        <Page history={history}>
             <div className={classes.heroUnit}>
                 <div className={classes.heroContent}>
                     <Typography variant="display3" align="center" style={{color:'white',}} gutterBottom>
@@ -61,7 +55,7 @@ const Landing = (props) => {
                     </div>
                 </div>
             </div>
-            <Body>
+            <Body bgc='#F5F5F5'>
                 <Typography variant="headline" component="h1" style={{ textAlign: 'center' }}>
                     Upcoming events
                         </Typography>
@@ -165,16 +159,7 @@ const Landing = (props) => {
                 </VerticalTimeline>
 
             </Body>
-            {/* Footer */}
-            <footer className={classes.footer}>
-                <Typography variant="title" align="center" gutterBottom>
-                    Oklahoma Referees
-                </Typography>
-                <Typography variant="subheading" align="center" color="textSecondary" component="p">
-                    created 2018
-                </Typography>
-            </footer>
-            {/* End footer */}
+            <Footer />
         </Page>
     )
 }

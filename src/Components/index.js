@@ -5,6 +5,11 @@ import Body from './Body';
 import Form from './Form';
 import NavBar from './NavBar'
 import Button from './Button';
+import Footer from './Footer'
+import Loading from './Loading'
+import Modal from './Modal'
+import Control from './Control'
+import ComingSoon from './ComingSoon'
 
 export {
     Page,
@@ -13,5 +18,10 @@ export {
     Body,
     Form,
     NavBar,
-    Button
+    Button,
+    Footer,
+    Loading,
+    Modal,
+    Control,
+    ComingSoon
 }
