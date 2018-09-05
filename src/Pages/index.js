@@ -8,6 +8,7 @@ import Rules from './Rules'
 import SRCInfo from './SRCInfo'
 import Evaluations from './Evaluations'
 import Links from './Links'
+import Policies from './Policies'
 
 export {
     Login,
@@ -19,5 +20,6 @@ export {
     Rules,
     SRCInfo,
     Evaluations,
-    Links
+    Links,
+    Policies
 } 

@@ -17,7 +17,8 @@ import {
   Rules,
   SRCInfo,
   Evaluations,
-  Links
+  Links,
+  Policies
 } from './Pages'
 
 export const UserContext = React.createContext('GUEST')
@@ -48,7 +49,7 @@ class App extends Component {
             <Route exact path="/srcInfo" component={SRCInfo} />
             <Route exact path="/evaluations" component={Evaluations} />
             <Route exact path="/links" component={Links} />
-            <Route exact path="/policies" component={Profile} />
+            <Route exact path="/policies" component={Policies} />
             <Route exact path="/settings" component={Settings} />
             <Route exact path="/refstatus" component={RefStatus} />
           </Switch>
