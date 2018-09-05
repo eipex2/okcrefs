@@ -54,6 +54,7 @@ export default ({ user, history }) => {
                 <Tab label="Referee Status" value="/refStatus" />
                 <Tab label="Evaluations" value="/evaluations" />
                 <Tab label="Links" value="/links" />
+                <Tab label="Futsal" value="/futsal" />
             </Tabs>
         </AppBar>
     )

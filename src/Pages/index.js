@@ -9,6 +9,7 @@ import SRCInfo from './SRCInfo'
 import Evaluations from './Evaluations'
 import Links from './Links'
 import Policies from './Policies'
+import Futsal from './Futsal'
 
 export {
     Login,
@@ -21,5 +22,6 @@ export {
     SRCInfo,
     Evaluations,
     Links,
-    Policies
+    Policies,
+    Futsal
 } 

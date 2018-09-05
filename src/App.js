@@ -18,7 +18,8 @@ import {
   SRCInfo,
   Evaluations,
   Links,
-  Policies
+  Policies,
+  Futsal
 } from './Pages'
 
 export const UserContext = React.createContext('GUEST')
@@ -52,6 +53,7 @@ class App extends Component {
             <Route exact path="/policies" component={Policies} />
             <Route exact path="/settings" component={Settings} />
             <Route exact path="/refstatus" component={RefStatus} />
+            <Route exact path="/futsal" component={Futsal} />
           </Switch>
         </Router>
         </UserContext.Provider>
